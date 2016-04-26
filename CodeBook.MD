@@ -12,7 +12,7 @@ The data fields from Output_Tidy_Dataset.txt and Output_Tidy_Dataset_Avg.txt wil
     * WALKING_UPSTAIRS
   
   #Measurement Fields
-  The following measurement variables are numeric. For the Output_Tidy_Dataset_Avg, the columns represent the Average of the Mean and STD variables.
+  The following measurement variables are numeric. For the Output_Tidy_Dataset_Avg, the columns represent the Average of the Mean and Standard Deviation variables. The feature variables were extracted from the features.txt and transformed as described below.  
   
   * tBodyAcc_Mean_Z
   * tGravityAcc_Mean_X
@@ -91,3 +91,7 @@ The data fields from Output_Tidy_Dataset.txt and Output_Tidy_Dataset_Avg.txt wil
   * fBodyAccMag_MeanFreq
   * fBodyBodyGyroMag_Mean
   * fBodyBodyGyroJerkMag_Std
+
+#Transformations
+    * Activity ID from the Train and Test datasets was joined to the Activity Names dataset and the Activity Names were used in place of the Activity ID. The Activity ID ranged from values 1 to 6 and were associated to one of the Activity Names listed above.  
+   * Measurement Variable names were formatted to remove "-mean()" or "-std()" to "_Mean" and "_Std". Any "()" were removed and any "-" was replaced with an "_".   
